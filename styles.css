@@ -1,0 +1,201 @@
+/* 🌸 Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 🎀 Header */
+header {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 12px;
+    width: 80%;
+    margin: auto;
+}
+
+/* 💖 Message Section */
+.message-section {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    margin: 30px auto;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* ✨ Reveal Message Button */
+#reveal-message {
+    background: linear-gradient(145deg, #ff758c, #ff7eb3);
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 118, 151, 0.5);
+    margin-top: 10px;
+}
+
+#reveal-message:hover {
+    background: linear-gradient(145deg, #ff6b8b, #ff85b0);
+    box-shadow: 0 6px 12px rgba(255, 100, 150, 0.6);
+    transform: scale(1.05);
+}
+
+/* 💖 Heartfelt Message Box */
+#heartfelt-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    font-size: 18px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+#heartfelt-message.show {
+    display: block;
+    opacity: 1;
+}
+
+/* 🎮 Minigames */
+.games {
+    margin-top: 30px;
+}
+
+button {
+    background: linear-gradient(145deg, #ff758c, #ff7eb3);
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 118, 151, 0.5);
+    margin: 10px;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #ff6b8b, #ff85b0);
+    box-shadow: 0 6px 12px rgba(255, 100, 150, 0.6);
+    transform: scale(1.05);
+}
+
+/* 🎮 Game Container */
+#game-container {
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: none;
+}
+
+/* 🧠 Memory Game */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background: #ff7eb3;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card.flipped {
+    background: #fff;
+    color: #ff7eb3;
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    background: #ff85b0;
+    color: white;
+    transform: scale(1.1);
+    pointer-events: none;
+}
+
+/* 💖 Clicker Game */
+#clicker-container {
+    text-align: center;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#click-button {
+    background: linear-gradient(145deg, #ff758c, #ff7eb3);
+    border: none;
+    padding: 20px 30px;
+    font-size: 22px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 118, 151, 0.5);
+    transition: transform 0.1s ease;
+}
+
+#click-button:active {
+    transform: scale(0.9);
+}
+
+#clicker-score {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#timer {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #ffebeb;
+}
+
+/* 🎇 Particle Effect for Clicker Game */
+.particle {
+    position: absolute;
+    font-size: 24px;
+    color: #ffebeb;
+    opacity: 1;
+    animation: rise 1s ease-out forwards;
+}
+
+@keyframes rise {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-50px); opacity: 0; }
+}
